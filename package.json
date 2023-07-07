@@ -10,6 +10,17 @@
     "preview": "vite preview",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+        "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+     }
+  },  
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"],
+    "rules": {
+        "subject-case": [2, "never", ["start-case", "pascal-case"]]
+     }
+  },
   "dependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
