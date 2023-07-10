@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { Layout } from './components/Layout'
+import { RegisterPage } from './pages/RegisterPage'
 
 export const router = createBrowserRouter([
     {
@@ -10,6 +11,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <HomePage />
+            },
+            {
+                path: 'register',
+                element: <RegisterPage />
             }
         ]
     },

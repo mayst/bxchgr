@@ -1,5 +1,7 @@
-import { Avatar, Box, Button, Container, TextField, Typography } from "@mui/material"
+import { Avatar, Box, Container, Typography } from "@mui/material"
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { FormInput } from "./FormInput";
+import { FormButton } from "./FormButton";
 
 export const LoginForm = () => {
 
@@ -28,31 +30,23 @@ export const LoginForm = () => {
           component="form"
           onSubmit={handleSubmit}
           sx={{ mt: 3, width: '100%' }}>
-          <TextField
-            name="username"
+          <FormInput
+            autoFocus
             required
-            fullWidth
+            name="username"
             id="username"
             label="Username"
-            autoFocus
-            sx={{ mb: 2 }}
           />
-          <TextField
+          <FormInput
+            required
             type="password"
             name="password"
-            required
-            fullWidth
             id="password"
             label="Password"
           />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3 }}
-          >
+          <FormButton>
             Log in
-          </Button>
+          </FormButton>
         </Box>
       </Box>
     </Container>

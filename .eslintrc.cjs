@@ -26,5 +26,13 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@tanstack/query/exhaustive-deps': 'error',
         '@tanstack/query/prefer-query-object-syntax': 'error',
+        '@typescript-eslint/no-misused-promises': [
+            2,
+            {
+                checksVoidReturn: {
+                    attributes: false,
+                },
+            },
+        ],
     },
 }

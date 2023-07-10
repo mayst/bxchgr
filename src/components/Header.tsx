@@ -1,4 +1,5 @@
 import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material"
+import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 
 interface IHeaderProps {
@@ -25,8 +26,16 @@ export const Header = (props: IHeaderProps) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             BXCHGR
           </Typography>
-          <Button color="inherit" sx={{ mr: 2 }}>Login</Button>
-          <Button color="inherit">Register</Button>
+          <Button
+            color="inherit"
+            sx={{ mr: 2 }}
+          >
+            Login
+          </Button>
+          <Button color="inherit"
+            component={Link}
+            to='/register'
+          >Register</Button>
         </Toolbar>
       </AppBar>
     </Box>
