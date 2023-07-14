@@ -29,6 +29,8 @@ export const Header = (props: IHeaderProps) => {
           <Button
             color="inherit"
             sx={{ mr: 2 }}
+            component={Link}
+            to='/login'
           >
             Login
           </Button>
