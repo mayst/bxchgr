@@ -1,7 +1,7 @@
 import { Avatar, Box, Container, Typography } from "@mui/material"
 import { useForm, SubmitHandler } from "react-hook-form";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
-import { FormInput } from "../../components/FormInput";
+import { TextFieldBx } from "../../components/inputs/TextFieldBx";
 import { FormButton } from "../../components/FormButton";
 
 type Inputs = {
@@ -76,7 +76,7 @@ export const RegisterForm = () => {
           onSubmit={handleSubmit(onSubmit)}
           sx={{ mt: 3, width: '100%' }}>
 
-          <FormInput
+          <TextFieldBx
             autoFocus
             id="username"
             label="Username"
@@ -88,7 +88,7 @@ export const RegisterForm = () => {
             )}
           />
 
-          <FormInput
+          <TextFieldBx
             autoComplete="email"
             id="email"
             label="Email"
@@ -100,7 +100,7 @@ export const RegisterForm = () => {
             )}
           />
 
-          <FormInput
+          <TextFieldBx
             id="password"
             label="Password"
             type="password"
@@ -112,7 +112,7 @@ export const RegisterForm = () => {
             )}
           />
 
-          <FormInput
+          <TextFieldBx
             id="passwordConfirm"
             label="Confirm Password"
             type="password"
