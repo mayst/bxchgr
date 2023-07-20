@@ -1,4 +1,5 @@
 import { Box, Chip, FormControl, InputLabel, MenuItem, Select } from "@mui/material"
+import { useId } from "react"
 
 type Option = {
   id: number
@@ -15,9 +16,9 @@ interface ISelectBxProps {
 
 export const MultipleSelectBx =
   (props: ISelectBxProps) => {
-    const { label, onChange, options, fullWidth } = props
+    const { label, onChange, options, fullWidth = false } = props
 
-    const selectId = label + '-select'
+    const selectId = useId()
 
     const selected = options
       .filter(opt => opt.selected)
