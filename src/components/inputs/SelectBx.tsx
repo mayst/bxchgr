@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material"
-import { forwardRef } from "react"
+import { forwardRef, useId } from "react"
 
 interface ISelectBxProps {
   label: string
@@ -16,7 +16,7 @@ export const SelectBx = forwardRef<HTMLSelectElement, ISelectBxProps>(
   (props: ISelectBxProps, ref) => {
     const { label, value, onChange, options, fullWidth } = props
 
-    const selectId = label + '-select'
+    const selectId = useId()
 
     return (
       <FormControl fullWidth={fullWidth}>
