@@ -1,10 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { SERVER_URL } from '../../constants'
 import { Book } from '../types/book'
+const baseUrl = import.meta.env.VITE_SERVER_URL
 
 export const searchApi = createApi({
     reducerPath: 'searchApi',
-    baseQuery: fetchBaseQuery({ baseUrl: SERVER_URL }),
+    baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: builder => ({
         searchBooksByName: builder.query<Book[], string>({
             query: searchTerm => ({
