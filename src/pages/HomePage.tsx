@@ -1,5 +1,9 @@
+import { GenreSelect } from "../components/hoc/GenreSelect"
+
 export const HomePage = () => {
+
   return (
-    <div>HomePage</div>
+    <div> Home Page
+    </div>
   )
 }
