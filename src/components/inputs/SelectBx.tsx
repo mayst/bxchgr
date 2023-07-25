@@ -20,9 +20,9 @@ export const SelectBx = forwardRef<HTMLSelectElement, ISelectBxProps>(
 
     return (
       <FormControl fullWidth={fullWidth}>
-        <InputLabel id={selectId + '-label'}>{label}</InputLabel>
+        <InputLabel id={`${selectId}-label`}>{label}</InputLabel>
         <Select
-          labelId={selectId + '-label'}
+          labelId={`${selectId}-label`}
           id={selectId}
           value={value}
           label={label}
