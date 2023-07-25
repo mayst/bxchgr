@@ -16,7 +16,7 @@ export const Layout = () => {
     <>
       <Header onSidebarOpen={handleSidebarOpen} />
       <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
-      <Container>
+      <Container sx={{ mt: 3 }}>
         <Outlet />
       </Container>
       <Footer />
