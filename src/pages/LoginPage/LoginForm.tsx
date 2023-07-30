@@ -3,30 +3,16 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { TextFieldBx } from "../../components/inputs/TextFieldBx";
 import { FormButton } from "../../components/FormButton";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useTranslation } from 'react-i18next'
+import { useMemo } from "react";
 
 type Inputs = {
   username: string,
   password: string
 }
 
-const rules = {
-  username: {
-    required: 'Username is required',
-    minLength: {
-      value: 5,
-      message: 'Username should be at least 5 characters long'
-    }
-  },
-  password: {
-    required: 'Password is required',
-    minLength: {
-      value: 8,
-      message: 'Password should be at least 8 characters long'
-    }
-  }
-}
-
 export const LoginForm = () => {
+  const { t } = useTranslation()
   const {
     register,
     handleSubmit,
@@ -34,6 +20,23 @@ export const LoginForm = () => {
   } = useForm<Inputs>()
 
   const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => console.log(data)
+
+  const rules = useMemo(() => ({
+    username: {
+      required: t('Username is required'),
+      minLength: {
+        value: 5,
+        message: t('Username should be at least 5 characters long')
+      }
+    },
+    password: {
+      required: t('Password is required'),
+      minLength: {
+        value: 8,
+        message: t('Password should be at least 8 characters long')
+      }
+    }
+  }), [t])
 
   return (
     <Container maxWidth="xs" >
@@ -50,7 +53,7 @@ export const LoginForm = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Log in
+          {t('Log in')}
         </Typography>
         <Box
           component="form"
@@ -60,7 +63,7 @@ export const LoginForm = () => {
           <TextFieldBx
             autoFocus
             id="username"
-            label="Username"
+            label={t("Username")}
             error={Boolean(errors.username)}
             helperText={errors.username?.message}
             {...register(
@@ -71,7 +74,7 @@ export const LoginForm = () => {
 
           <TextFieldBx
             id="password"
-            label="Password"
+            label={t("Password")}
             type="password"
             error={Boolean(errors.password)}
             helperText={errors.password?.message}
@@ -82,7 +85,7 @@ export const LoginForm = () => {
           />
 
           <FormButton>
-            Log in
+            {t('Log in')}
           </FormButton>
         </Box>
       </Box>

@@ -1,64 +1,68 @@
 {
-  "name": "react-ts",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+    "name": "react-ts",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "prepare": "husky install"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "rules": {
+            "subject-case": [
+                2,
+                "never",
+                [
+                    "start-case",
+                    "pascal-case"
+                ]
+            ]
+        }
+    },
+    "dependencies": {
+        "@commitlint/cli": "^17.6.6",
+        "@commitlint/config-conventional": "^17.6.6",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@fontsource/roboto": "^5.0.4",
+        "@mui/icons-material": "^5.13.7",
+        "@mui/material": "^5.13.7",
+        "@reduxjs/toolkit": "^1.9.5",
+        "@tanstack/react-query": "^4.29.19",
+        "husky": "^8.0.3",
+        "i18next": "^23.2.11",
+        "i18next-browser-languagedetector": "^7.1.0",
+        "i18next-http-backend": "^2.2.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.45.1",
+        "react-i18next": "^13.0.2",
+        "react-redux": "^8.1.1",
+        "react-router-dom": "^6.14.1"
+    },
+    "devDependencies": {
+        "@tanstack/eslint-plugin-query": "^4.29.9",
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.6",
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "@vitejs/plugin-react": "^4.0.1",
+        "eslint": "^8.44.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.1",
+        "husky": "^8.0.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.0"
     }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "subject-case": [
-        2,
-        "never",
-        [
-          "start-case",
-          "pascal-case"
-        ]
-      ]
-    }
-  },
-  "dependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.0.4",
-    "@mui/icons-material": "^5.13.7",
-    "@mui/material": "^5.13.7",
-    "@reduxjs/toolkit": "^1.9.5",
-    "@tanstack/react-query": "^4.29.19",
-    "husky": "^8.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.45.1",
-    "react-redux": "^8.1.1",
-    "react-router-dom": "^6.14.1"
-  },
-  "devDependencies": {
-    "@tanstack/eslint-plugin-query": "^4.29.9",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
-    "@vitejs/plugin-react": "^4.0.1",
-    "eslint": "^8.44.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.1",
-    "husky": "^8.0.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.0"
-  }
 }

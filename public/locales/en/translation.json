@@ -1,0 +1,18 @@
+{
+    "Login": "Login",
+    "Log in": "Log in",
+    "Register": "Register",
+    "Username": "Username",
+    "Password": "Password",
+    "Username is required": "Username is required",
+    "Username should be at least 5 characters long": "Username should be at least 5 characters long",
+    "Password is required": "Password is required",
+    "Password should be at least 8 characters long": "Password should be at least 8 characters long",
+    "Email is required": "Email is required",
+    "Invalid email address": "Invalid email address",
+    "Create Account": "Create Account",
+    "Confirm Password": "Confirm Password",
+    "Password confirmation is required": "Password confirmation is required",
+    "Passwords do not match": "Passwords do not match",
+    "Sign Up": "Sign Up"
+}
