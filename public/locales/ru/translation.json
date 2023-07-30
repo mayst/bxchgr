@@ -1,0 +1,18 @@
+{
+    "Login": "Войти",
+    "Log in": "Войти",
+    "Register": "Зарегистрироваться",
+    "Username": "Логин",
+    "Password": "Пароль",
+    "Username is required": "Введите логин",
+    "Username should be at least 5 characters long": "Логин должен состоять минимум из 5 символов",
+    "Password is required": "Введите пароль",
+    "Password should be at least 8 characters long": "Пароль должен состоять минимум из 8 символов",
+    "Email is required": "Введите адрес электронной почты",
+    "Invalid email address": "Некорректный адрес электронной почты",
+    "Create Account": "Создать аккаунт",
+    "Confirm Password": "Подтверждение пароля",
+    "Password confirmation is required": "Введите пароль ещё раз",
+    "Passwords do not match": "Пароли не совпадают",
+    "Sign Up": "Зарегистрироваться"
+}

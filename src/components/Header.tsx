@@ -1,4 +1,5 @@
 import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material"
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -8,6 +9,7 @@ interface IHeaderProps {
 
 export const Header = (props: IHeaderProps) => {
   const { onSidebarOpen } = props
+  const { t } = useTranslation()
 
   return (
     <Box>
@@ -32,12 +34,14 @@ export const Header = (props: IHeaderProps) => {
             component={Link}
             to='/login'
           >
-            Login
+            {t('Login')}
           </Button>
           <Button color="inherit"
             component={Link}
             to='/register'
-          >Register</Button>
+          >
+            {t('Register')}
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
